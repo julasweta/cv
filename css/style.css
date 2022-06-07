@@ -1,0 +1,43 @@
+header{
+  color: rgb(69, 69, 73);
+  padding: 10px 40px 5px 100px;
+  background-color: rgb(225, 232, 241);
+  display: flex;
+  justify-content: space-between;
+}
+h1{
+animation: name 7s infinite;
+}
+@keyframes name{
+  from{
+color: rgb(86, 159, 177);
+  }
+  to{
+color: rgb(202, 153, 177);
+  }
+}
+
+.lang{
+  justify-content: space-between;
+}
+
+main{
+  display: flex;
+  background-color: rgb(227, 231, 240);
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+aside{
+  width: 30%;
+  padding: 10px;
+  background-color: rgb(167, 174, 184);
+  border-right: 1px solid gray;
+}
+section{
+  padding: 20px;
+}
+li a{
+  color: blue;
+}.repos li a{
+  color: darkolivegreen;
+}
