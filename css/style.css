@@ -90,3 +90,56 @@ color: darkgoldenrod;
 color: rgb(250, 58, 10);
   }
 }
+
+
+/* RESPONSIVE */
+/* 1050*/
+@media screen and (max-width: 1050px) {
+.photo{
+  width: 200px;
+}
+}
+
+/* 700px */
+@media screen and (max-width: 992px) {
+.photo {
+  width: 150px;
+}
+main{
+  flex-direction: column;
+}
+aside, section{
+  padding: 10px;
+  width: 100%;
+}
+aside {
+  margin-top: 70px;
+}
+article{
+margin-right: 20px;
+}
+.header__box{
+  flex-direction: column;
+}
+.header__box span{
+  padding: 0;
+}
+.lang{
+ display: inline-flex;
+}
+h1{
+  margin: 0;
+}
+aside {
+  padding-top: 100px;
+}
+}
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+
+}
+
+/* 0- 576px */
+@media screen and (max-width: 576px) {
+
+}
