@@ -13,9 +13,15 @@
    box-shadow: 5px 5px 15px 5px #4d70a5;
    border-radius: 30%;
 }
+
+.header__box span{
+  padding: 40px;
+}
+
 h1{
 animation: name 7s infinite;
 }
+
 @keyframes name{
   from{
 color: rgb(86, 159, 177);
@@ -49,15 +55,38 @@ aside{
   padding: 10px;
   background-color: rgb(167, 174, 184);
   border-right: 1px solid gray;
-  padding-top: 70px;
+  padding-top: 80px;
 }
 section{
   padding: 20px;
-  padding-top: 70px;
+  padding-top: 80px;
   width: 70%;
 }
 li a{
   color: blue;
 }.repos li a{
   color: darkolivegreen;
+}
+
+.codewars{
+  border: 3px solid darkgoldenrod;
+  border-radius: 45px;
+  padding: 10px;
+  color:darkgoldenrod;
+  font-weight: bold;
+  animation: codewars 5s infinite;
+}
+.codewars:hover{
+  border: 3px solid rgb(146, 114, 33);
+  -webkit-box-shadow: inset 5px 5px 15px 5px #000000;
+  box-shadow: inset 3px 3px 10px 3px #000000;
+}
+
+@keyframes codewars{
+  from{
+color: darkgoldenrod;
+  }
+  to{
+color: rgb(250, 58, 10);
+  }
 }
