@@ -1,93 +1,122 @@
-
 .header__box {
   color: rgb(69, 69, 73);
-  background-color: rgb(225, 232, 241);
+  background-color: rgb(242, 245, 248);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
-  left:50%;
-  transform:translate(-50%, 0%);
-  width: max-content;
-  padding: 0 100px 0 100px;
-   -webkit-box-shadow: 5px 5px 15px 5px #4d70a5;
-   box-shadow: 5px 5px 15px 5px #4d70a5;
-   border-radius: 30%;
+  width: 100%;
+  animation: head 7s infinite;
 }
 
-.header__box span{
+.header__box .vacancy {
   padding: 40px;
 }
 
-h1{
-animation: name 7s infinite;
+h1 {
+  background: #87A4CF;
+  background: repeating-linear-gradient(to right, #87A4CF 0%, #231421 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@keyframes name{
-  from{
-color: rgb(86, 159, 177);
+
+@keyframes head {
+  100% {
+    box-shadow: 5px 5px 5px 5px rgb(179, 167, 224),
+      5px 5px 5px 5px rgb(85, 165, 89),
+      5px 5px 5px 5px rgb(168, 189, 121);
   }
-  to{
-color: rgb(202, 153, 177);
+
+  50% {
+    box-shadow: 5px 5px 5px 5px rgb(167, 168, 224),
+      5px 5px 5px 5px rgb(213, 167, 224),
+      5px 5px 5px 5px rgb(224, 173, 173);
+  }
+
+  0% {
+    box-shadow: 5px 5px 5px 5px rgb(151, 219, 162),
+      5px 5px 5px 5px rgb(190, 224, 167),
+      5px 5px 5px 5px rgb(224, 167, 167);
   }
 }
-.photo{
-  width:300px;
+
+.photo {
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
-.photo img{
+
+.photo img {
   width: 100%;
   object-fit: cover;
 }
 
-.lang{
+.lang {
   justify-content: space-between;
+  background: #87A4CF;
+  background: repeating-linear-gradient(to right, #1c6be2 0%, #dd11c2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-main{
+main {
   display: flex;
   background-color: rgb(227, 231, 240);
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
 }
-aside{
+
+aside {
   width: 30%;
   padding: 10px;
   background-color: rgb(167, 174, 184);
   border-right: 1px solid gray;
   padding-top: 80px;
 }
-section{
-  padding: 20px;
+
+section {
   padding-top: 80px;
   width: 70%;
 }
-li a{
+  article {
+    padding: 20px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+ article:nth-child(2n) {
+   background-color: white;
+
+ }
+li a {
   color: blue;
-}.repos li a{
+}
+
+.repos li a {
   color: darkolivegreen;
 }
 
-.codewars{
+.codewars {
   border: 3px solid darkgoldenrod;
   border-radius: 45px;
   padding: 10px;
-  color:darkgoldenrod;
+  color: darkgoldenrod;
   font-weight: bold;
   animation: codewars 5s infinite;
 }
-.codewars:hover{
+
+.codewars:hover {
   border: 3px solid rgb(146, 114, 33);
   -webkit-box-shadow: inset 5px 5px 15px 5px #000000;
   box-shadow: inset 3px 3px 10px 3px #000000;
 }
 
-@keyframes codewars{
-  from{
-color: darkgoldenrod;
+@keyframes codewars {
+  from {
+    color: darkgoldenrod;
   }
-  to{
-color: rgb(122, 104, 228);
+
+  to {
+    color: rgb(122, 104, 228);
   }
 }
 
@@ -95,51 +124,72 @@ color: rgb(122, 104, 228);
 /* RESPONSIVE */
 /* 1050*/
 @media screen and (max-width: 1050px) {
-.photo{
-  width: 200px;
-}
+  .photo {
+    width: 200px;
+  }
+
 }
 
 /* 700px */
 @media screen and (max-width: 992px) {
-.photo {
-  width: 150px;
-}
-main{
-  flex-direction: column;
-}
-aside, section{
-  padding: 10px;
-  width: 100%;
-}
-aside {
-  margin-top: 70px;
-}
-article{
-margin-right: 20px;
-}
-.header__box{
-  flex-direction: column;
-}
-.header__box span{
-  padding: 0;
-}
-.lang{
- display: inline-flex;
-}
-h1{
+  .photo {
+    width: 150px;
+  }
+
+
+section, aside{
   margin: 0;
 }
-aside {
-  padding-top: 100px;
-}
-}
-/* 576px - 768px */
-@media screen and (max-width: 768px) {
+  aside {
+ margin: 0 auto;
+
+  }
+
+
+  .lang {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin: 0;
+  }
 
 }
 
-/* 0- 576px */
-@media screen and (max-width: 576px) {
 
-}
+  /* 576px - 768px */
+  @media screen and (max-width: 768px) {
+    .header__box{
+      flex-direction: column;
+    }
+   .header__box .vacancy {
+      padding: 0;
+      text-align: center;
+    }
+    .lang{
+      flex-direction: row;
+      justify-content: space-around;
+    }
+     main {
+       flex-direction: column;
+     }
+     aside{
+       width: 100%;
+       text-align: center;
+       padding: 0;
+       padding-top: 120px;
+     }
+     section{
+       width: 100%;
+       padding: 0;
+     }
+     li{
+       list-style: none;
+     }
+
+
+  }
+
+  /* 0- 576px */
+  @media screen and (max-width: 576px) {}
